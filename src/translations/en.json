@@ -1,0 +1,7 @@
+{
+  "app.title": "Titolo",
+  "app.intro": "Introduzione",
+  "pluralized_key.one": "Only one pluralization found.",
+  "pluralized_key.other": "Wow, you have {key}%s pluralizations!",
+  "pluralized_key.zero": "You have no pluralization."
+}

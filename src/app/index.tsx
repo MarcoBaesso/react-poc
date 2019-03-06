@@ -1,7 +1,8 @@
 import * as React from 'react';
-import './App.css';
+import './index.css';
 
 import logo from './logo.svg';
+import {FormattedMessage} from 'react-intl';
 
 class App extends React.Component {
   public render() {
@@ -12,7 +13,7 @@ class App extends React.Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
+            <FormattedMessage id="pluralized_key" values={{count: 0}} />
         </p>
       </div>
     );

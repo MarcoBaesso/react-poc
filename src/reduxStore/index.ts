@@ -1,5 +1,4 @@
 import { combineReducers, Dispatch, Reducer } from 'redux';
-import { routerReducer,RouterState } from 'react-router-redux';
 
 // Import your state types and reducers here
 import reducer from "./sampleReducer/reducer";
@@ -7,7 +6,7 @@ import {IExampleBeanState} from "./sampleReducer/types";
 
 // The top-level state object
 export interface IApplicationState {
-    router: RouterState,
+    //router: RouterState,
     exampleBeanState: IExampleBeanState
 }
 
@@ -16,7 +15,7 @@ export interface IApplicationState {
 // the reducer acts on the corresponding ApplicationState property type.
 export const reducers: Reducer<IApplicationState> = combineReducers<IApplicationState>({
     exampleBeanState: reducer,
-    router: routerReducer
+    //router: routerReducer
 });
 
 /*

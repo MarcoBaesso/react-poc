@@ -1,32 +1,27 @@
 import { createStore, applyMiddleware, compose, Store } from 'redux';
 import {DeepPartial,StoreCreator,StoreEnhancer, Reducer} from 'redux'
-import { routerMiddleware } from 'react-router-redux'
 import thunk from 'redux-thunk'
-import createHistory from 'history/createBrowserHistory'
 // import rootReducer from '../reducers/index'
 // import listen from 'redux-listener-middleware'
 import { createLogger } from 'redux-logger'
 import { composeWithDevTools } from 'redux-devtools-extension'
-
+import * as Redux from 'redux';
 // If you use react-router, don't forget to pass in your history type.
-import { History } from 'history';
+
 
 // Import the state interface and our combined reducers.
 import { IApplicationState, reducers } from './';
 
 function configureStore(
-    history: History,
     initialState: IApplicationState,
 ): Store<IApplicationState> {
     const enhancers = []
-    const middleware = [
-        thunk,
-        //reduxActionListener,
-        routerMiddleware(history)
-    ]
+    const middleware = []
+
+    middleware.push(thunk);
 
     if (process.env.NODE_ENV === 'development') {
-        const logger = createLogger({
+        const logger : Redux.Middleware = createLogger({
             // ...options
         });
         const devToolsExtension = composeWithDevTools({});
@@ -50,12 +45,14 @@ function configureStore(
 
 const mInitialState : IApplicationState= {
     exampleBeanState: {},
+    /*
     router: {
         location: null
     }
+    */
 };
 
-export default configureStore(createHistory(), mInitialState);
+export const store : Store<IApplicationState> = configureStore(mInitialState);
 
 
 
