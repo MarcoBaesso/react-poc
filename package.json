@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/react-router": "^4.4.4",
     "autoprefixer": "7.1.6",
     "babel-jest": "20.0.3",
     "babel-loader": "7.1.2",
@@ -60,14 +61,15 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
+    "@material-ui/core": "^3.9.2",
     "@types/history": "^4.7.2",
     "@types/jest": "^24.0.1",
+    "@types/material-ui": "^0.21.6",
     "@types/node": "^11.9.0",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",
     "@types/react-intl": "^2.3.17",
     "@types/react-redux": "^7.0.1",
-    "@types/react-router": "^4.4.4",
     "@types/react-router-dom": "^4.3.1",
     "@types/redux-devtools-extension": "^2.13.2",
     "@types/redux-logger": "^3.0.7",
